@@ -1,0 +1,272 @@
+[10:17:16 AM] Amol Jore: uid : attlabs
+[10:17:25 AM] Amol Jore: pass : Musigma1234
+
+----
+9162330790
+code:183765
+mp:960939
+
+git oull
+
+find / -type d -name "x*"
+
+git reset --hard HEAD
+git clean -f -d
+git pull
+for branch
+git pull origin avp-ride-ACL
+
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+export PATH=${JAVA_HOME}/bin:${PATH}
+
+create a new repository
+
+create a new directory, open it and perform a
+git init
+to create a new git repository.
+checkout a repository
+
+create a working copy of a local repository by running the command
+git clone /path/to/repository
+when using a remote server, your command will be
+git clone username@host:/path/to/repository
+workflow
+
+your local repository consists of three "trees" maintained by git. the first one is your Working Directory which holds the actual files. 
+the second one is the Index which acts as a staging area and finally the HEAD which points to the last commit you've made.
+add & commit
+
+git add all
+git add -A
+git force push
+git push origin RIDE-New-Offshore --force
+
+
+You can propose changes (add it to the Index) using
+git add <filename>
+git add *
+This is the first step in the basic git workflow. To actually commit these changes use
+git commit -m "Commit message"
+Now the file is committed to the HEAD, but not in your remote repository yet.
+pushing changes
+
+Your changes are now in the HEAD of your local working copy. To send those changes to your remote repository, execute
+git push origin master
+Change master to whatever branch you want to push your changes to.
+
+If you have not cloned an existing repository and want to connect your repository to a remote server, you need to add it with
+git remote add origin <server>
+Now you are able to push your changes to the selected remote server
+branching
+
+Branches are used to develop features isolated from each other. The master branch is the "default" branch when you create a repository. 
+Use other branches for development and merge them back to the master branch upon completion.
+
+create a new branch named "feature_x" and switch to it using
+git checkout -b feature_x
+switch back to master
+git checkout master
+and delete the branch again
+git branch -d feature_x
+a branch is not available to others unless you push the branch to your remote repository
+git push origin <branch>
+update & merge
+
+git pull origin features
+
+wc -l `find /home/sujit/zzz -type f`
+
+SELECT VENUE,(SELECT  COUNT(DISTINCT VENUE) FROM MARKER_DET)  COUNT FROM MARKER_DET GROUP BY VENUE
+SELECT NAME,(SELECT  COUNT(DISTINCT NAME) FROM ITEMS)  COUNT FROM ITEMS GROUP BY NAME
+
+You can quickly review the changes made to a file using the diff command:
+
+git diff <commit hash> <filename>
+Then to revert a specific file to that commit use the reset command:
+
+git reset <commit hash> <filename>
+
+to update your local repository to the newest commit, execute
+git pull
+in your working directory to fetch and merge remote changes.
+to merge another branch into your active branch (e.g. master), use
+git merge <branch>
+in both cases git tries to auto-merge changes. Unfortunately, this is not always possible and results in conflicts.
+ You are responsible to merge those conflicts manually by editing the files shown by git. After changing, you need to mark them as merged with
+git add <filename>
+before merging changes, you can also preview them by using
+git diff <source_branch> <target_branch>
+tagging
+
+it's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named 1.0.0 by executing
+git tag 1.0.0 1b2e1d63ff
+the 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id with
+git log
+you can also use fewer characters of the commit id, it just has to be unique.
+replace local changes
+
+In case you did something wrong (which for sure never happens ;) you can replace local changes using the command
+git checkout -- <filename>
+this replaces the changes in your working tree with the last content in HEAD. Changes already added to the index, as well as new files, will be kept.
+
+If you instead want to drop all your local changes and commits, fetch the latest history from the server and point your local master branch at it like this
+git fetch origin
+git reset --hard origin/mastergit remote add --track master develop git@github.com:att/rcloud.git
+
+useful hints
+
+built-in git GUI
+gitk
+use colorful git output
+git config color.ui true
+show log on just one line per commit
+git config format.pretty oneline
+use interactive adding
+git add -i
+
+
+R
+------------
+apt-cache showpkg r-base 
+http://www.sysads.co.uk/2014/03/install-r-base-3-0-3-ubuntu-13-10/
+
+----
+
+tsv to csv
+ sed 's/\t/,/g' input_file > output_file
+tsv to psv
+sed 's/\t/|/g' Cluster_1_data.txt > Cluster2.tsv
+
+
+./config --enable-R-shlib
+make uninstall
+:/etc/R$ sudo vim ldpaths
+/usr/lib/R/site-library
+.libPaths()
+installed.packages()
+remove.packages("rcloud.support")
+
+-------------------------------------------------------------
+
+stackoverflow.com/questions/7244321/how-to-update-github-forked-repository
+https://help.github.com/articles/syncing-a-fork
+
+ cd rcloud
+ git remote aloud.git
+git fetch upstream
+git rebase upstream/master
+
+git merge upstream/master
+git pull --rebase
+
+git push origin develop
+••••••••••
+-----------------------
+git clone https://github.com/sujitbehera27/rcloud.git
+cd rcloud
+git remote add upstream https://github.com/att/rcloud.git
+git fetch upstream
+git checkout develop
+git merge upstream/develop
+git push origin develop
+-----------------
+git checkout master
+git pull
+git checkout mobiledevicesupport
+git merge master
+***********************
+scripts/shutdown.sh; sudo killall RsrvCHx; sudo killall RsrvSRV
+
+sudo ROOT=`pwd` R
+require(rcloud.support)
+rcloud.support:::configure.rcloud("script")
+rcs.set(rcloud.support:::rcs.key('.allusers','system','config','addons'), c('rcloud.viewer', 'rcloud.enviewer'))
+
+*************************
+--------------
+REBASE:
+git clone https://github.com/sujitbehera27/rcloud.git
+cd rcloud
+git remote add upstream https://github.com/att/rcloud.git
+git fetch upstream
+git checkout develop
+git merge upstream/develop
+git push origin develop
+git chekcout my-branch
+git merge develop
+git add .
+git commit -m 'merged with develop'
+git push origin my-branch
+
+------------------------------
+
+http://www.homeopathytoday.org/tag/symphytum/
+http://abchomeopathy.com/forum2.php/213234/
+Symphytum Officinale
+ Arnica
+rutag 
+Calcarea Phosphorica
+
+------
+sudo rm -r /home/sujit/R/x86_64-pc-linux-gnu-library/3.1/rcloud.support/
+
+#rebase your remote repo
+sudo killall -15 Rserve
+now="$(date +'%d%h-%Y %H%M%S')" || exit
+mv "rcloud" "rcloud_$now" || exit
+echo "(DONE) :: rcoud folder renamed to rcloud_$now"
+git clone -b develop https://github.com/sujitbehera27/rcloud.git
+cp "rcloud_$now/conf/rcloud.conf" "rcloud/conf/rcloud.conf" || exit
+cd rcloud || exit
+git remote add upstream https://github.com/att/rcloud.git
+git fetch upstream
+echo "(DONE) : fetched upstream"
+git checkout develop || exit
+echo "(DONE) : chkout develop"
+git merge upstream/develop || exit
+echo "(DONE) : merge develop"
+##git push origin develop || exit
+echo "(DONE) :: pushed develop"
+git branch "resolve_$1" || exit
+git checkout "resolve_$1" || exit
+echo "(DONE) :: created a resolve_$1 branch" || exit
+cd rcloud
+scripts/fresh_start.sh
+echo "(DONE) started rcloud and taken the backup of your work, you are working on resolve_$1 branch ...."
+---------------------
+cd /home/sujit/R/x86_64-pc-linux-gnu-library/3.1
+sudo rm -rf rcloud.support
+cd -
+-----------------
+
+hdfc 00531140245521 BROOKE FIELDS
+HDFC0002870
+
+ICIC0000284
+028401513936
+
+A303,4TH FLOOR,ABAN HUMMINGBEE,HARALAKUNTE
+VILLAGE,SOMSUNDERPALYA,HSR LAYOUT
+BANGALORE
+KARNATAKA - INDIA - 560102
+
+Your Base Branch:
+MR.SUJIT KUMAR BEHERA
+A303,4TH FLOOR,ABAN HUMMINGBEE,HARALAKUNTE
+VILLAGE,SOMSUNDERPALYA,HSR LAYOUT
+BANGALORE
+KARNATAKA - INDIA - 560102
+A-103, MIKNIK SHOPPING MALL,,
+GROUND FLOOR, NAYAPALLI,, BBNR,
+OR, 751012
+---------------------------
+cutr columns in a csv
+
+cut -d, -f 1,4,5,9,10,11,12,13,14,15,16,17,18,19,20,21 MiamiHeatFinal3com.csv > MiamiHeatFinal4.csv
+insert , to eol
+sed "s/$/,/g" zips1.csv >> zips2.csv
+-----------------------------
+774055-17102014
+000027PRqnMLdi8qzkCDy01D6jIxxy
+UuFb0h"klLXOUhGAAXpFNr!B7t3iT5
+nTFOmXe6Wy9iRCKlhz36p7qNs83sNo
